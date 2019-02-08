@@ -1,0 +1,40 @@
+{
+  "name": "tobidsn/laravel-userstamps",
+  "homepage": "https://github.com/tobidsn/laravel-userstamps",
+  "license": "MIT",
+  "description": "A simple Laravel package for Eloquent Model user specific feilds.",
+  "keywords": [
+    "tobidsn",
+    "laravel",
+    "userstamps",
+    "eloquent",
+    "userstamps",
+    "created_by",
+    "updated_by",
+    "deleted_by"
+  ],
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Tobi",
+      "email": "tobidsn.github.io"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "~5.5",
+    "illuminate/database": "~5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tobidsn\\Userstamps\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tobidsn\\Userstamps\\UserstampsServiceProvider"
+      ]
+    }
+  }
+}
