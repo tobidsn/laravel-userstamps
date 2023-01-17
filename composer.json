@@ -20,10 +20,12 @@
       "email": "tobidsn@gmail.com"
     }
   ],
+  "readme": "./readme.md",
+  "time": "2022-08-06",
   "require": {
-    "php": ">=7.0",
-    "illuminate/support": "~5.5",
-    "illuminate/database": "~5.5"
+    "php": "^8.0.2",
+    "illuminate/support": "^9.0",
+    "illuminate/database": "^9.0"
   },
   "autoload": {
     "psr-4": {

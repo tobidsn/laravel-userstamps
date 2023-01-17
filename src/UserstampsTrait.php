@@ -2,7 +2,7 @@
 
 namespace Tobidsn\Userstamps;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method   string getTable()
  * @method   void observe($observer)
  * @method   BelongsTo belongsTo($related, $foreignKey = null, $otherKey = null, $relation = null)
- * @package  Tobidsn\Userstamps
+ * @package  Hrshadhin\Userstamps
  */
 
 trait UserstampsTrait
@@ -148,6 +148,14 @@ trait UserstampsTrait
         }
 
         return '';
+    }
+
+
+    public function isCreator($user_id=null) {
+        if( !isset($user_id) ) {
+            $user_id == auth()->user()->id;
+        }
+        return $this->created_by == $user_id;
     }
     
 }
