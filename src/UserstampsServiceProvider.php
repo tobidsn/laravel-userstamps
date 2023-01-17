@@ -16,11 +16,11 @@ class UserstampsServiceProvider extends ServiceProvider
     {
         Blueprint::macro(
             'userstamps', function () {
-                $this->unsignedInteger('created_by')->nullable()
+                $this->bigInteger('created_by')->unsigned()->nullable()
                     ->index();
-                $this->unsignedInteger('updated_by')->nullable()
+                $this->bigInteger('updated_by')->unsigned()->nullable()
                     ->index();
-                $this->unsignedInteger('deleted_by')->nullable()
+                $this->bigInteger('deleted_by')->unsigned()->nullable()
                     ->index();
             }
         );
